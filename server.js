@@ -2,6 +2,11 @@ const express = require('express')
 
 // app can now use all things express:
 const app = express()
+
+// to ensure our server can handle requests from local computers (first do npm insall cors -save in terminal):
+const cors = require('cors')
+app.use(cors())
+
 const PORT = 8000
 
 const rappers = {
