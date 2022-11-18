@@ -39,6 +39,7 @@ app.get('/api/:name', (request, response) => {
     }
 })
 
-app.listen(PORT, () => {
+// environment variable for host to use own port OR use our defined port of 8000:
+app.listen(process.env.PORT || PORT, () => {
     console.log(`The server is now running on port ${PORT}!`)
 })
